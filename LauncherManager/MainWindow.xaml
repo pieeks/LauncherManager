@@ -5,8 +5,64 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LauncherManager"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        Background="#E5E5E5"
+        Title="MainWindow" Height="650" Width="1080">
+    <Grid ShowGridLines="True">
+        <!-- 
+            Color
+            Jet = #363636
+            Gunmetal = #242F40
+            Satin sheen gold = #CCA43B
+            Platinum = #E5E5E5
+            White = #FFFFFF
+         -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <StackPanel Grid.Column="0" Background="#363636">
+            <TextBlock Foreground="#E5E5E5" Text="SideBar Element 1"/>
+            <TextBlock Foreground="#E5E5E5" Text="SideBar Element 2"/>
+            <TextBlock Foreground="#E5E5E5" Text="SideBar Element 3"/>
+        </StackPanel>
+        
+        <Grid Grid.Column="1" ShowGridLines="True">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            
+            <TextBlock Grid.Row="0" Text="Main content placeholder"/>
+            <Button 
+                Grid.Row="0" 
+                Name="CloseButton" 
+                Content="X" 
+                HorizontalAlignment="Right" 
+                VerticalAlignment="Top" 
+                Margin="0,5,10,0" 
+                Click="CloseButton_CLick">
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Grid>
+                                <TextBlock Text="X" FontSize="14" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#363636"/>
+                                    <Setter Property="Foreground" Value="#E5E5E5"/>    
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+            </Button>
+            
+            <TextBlock Grid.Row="1" Text="Main content"/>
+        </Grid>
+        
         
     </Grid>
 </Window>
