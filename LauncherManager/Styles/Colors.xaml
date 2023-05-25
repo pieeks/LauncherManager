@@ -1,0 +1,17 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <!-- Definiert die Farben -->
+    <Color x:Key="Jet">#363636</Color>
+    <Color x:Key="Gunmetal">#242F40</Color>
+    <Color x:Key="SatinSheenGold">#CCA43B</Color>
+    <Color x:Key="Platinum">#E5E5E5</Color>
+    <Color x:Key="White">#FFFFFF</Color>
+    
+    <!-- Definiere die Brushes -->
+    <SolidColorBrush x:Key="JetBrush" Color="{StaticResource Jet}"/>
+    <SolidColorBrush x:Key="GunMetalBrush" Color="{StaticResource Gunmetal}"/>
+    <SolidColorBrush x:Key="SatinSheenGoldBrush" Color="{StaticResource SatinSheenGold}"/>
+    <SolidColorBrush x:Key="PlatinumBrush" Color="{StaticResource Platinum}" />
+    <SolidColorBrush x:Key="WhiteBrush" Color="{StaticResource White}"/>
+</ResourceDictionary>
