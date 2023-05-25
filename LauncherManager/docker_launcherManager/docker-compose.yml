@@ -1,0 +1,15 @@
+﻿version: '3'
+services:
+
+  database:
+    build:
+      context: ./database
+    environment:
+      MYSQL_ROOT_PASSWORD: "example"
+      MYSQL_DATABASE: "motorshow"
+      MYSQL_USER: "user"
+      MYSQL_PASSWORD: "mypass"
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./database/data:/var/lib/mysql

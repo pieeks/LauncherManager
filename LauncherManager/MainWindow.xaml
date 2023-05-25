@@ -12,7 +12,7 @@
         Background="{StaticResource PlatinumBrush}"
         Title="MainWindow" Height="550" Width="1080"
         >
-    <Grid ShowGridLines="True">
+    <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
@@ -33,9 +33,9 @@
                     <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right"
                                 Margin="0 0 5 0" VerticalAlignment="Center">
                         <Button x:Name="MinimizeButton" Content="_" Background="Transparent" Foreground="{StaticResource JetBrush}"
-                                BorderThickness="0" FontSize="16" Margin="0 0 5 0"/>
+                                BorderThickness="0" FontSize="16" Margin="0 0 5 0" Click="MinimizeButton_OnClick"/>
                         <Button x:Name="MaximizeButton" Content="☐" Background="Transparent" Foreground="{StaticResource JetBrush}"
-                                BorderThickness="0" FontSize="15" Margin="0 0 5 0 "/>
+                                BorderThickness="0" FontSize="15" Margin="0 0 5 0" Click="MaximizeButton_OnClick"/>
                         <Button x:Name="CloseButton" Background="Transparent"  Click="CloseButton_Click" BorderThickness="0">
                             <TextBlock Text="x" Foreground="{StaticResource JetBrush}" FontSize="16"
                                        Margin="0 0 5 0" IsHitTestVisible="True"/>

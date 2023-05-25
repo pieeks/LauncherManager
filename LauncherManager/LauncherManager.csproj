@@ -82,5 +82,12 @@
     <ItemGroup>
         <None Include="App.config" />
     </ItemGroup>
+    <ItemGroup>
+      <Content Include="docker_launcherManager\database\Dockerfile" />
+      <Content Include="docker_launcherManager\docker-compose.yml" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="docker_launcherManager\database\data\" />
+    </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

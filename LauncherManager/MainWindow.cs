@@ -13,19 +13,30 @@ namespace LauncherManager
             InitializeComponent();
         }
 
+        private void Dragbar_OnMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
+            if (e.ClickCount == 2)
+            {
+                this.WindowState = this.WindowState == WindowState.Maximized
+                    ? WindowState.Normal
+                    : WindowState.Maximized; 
+            }
+        }
+        
         private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
         }
 
-        private void TestButton_OnClick(object sender, RoutedEventArgs e)
+        private void MaximizeButton_OnClick(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+            this.WindowState = this.WindowState == WindowState.Maximized ? WindowState.Normal : WindowState.Maximized;
         }
 
-        private void Dragbar_OnMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void MinimizeButton_OnClick(object sender, RoutedEventArgs e)
         {
-            this.DragMove(); 
+            this.WindowState = this.WindowState == WindowState.Minimized ? WindowState.Normal : WindowState.Minimized; 
         }
     }
 }
