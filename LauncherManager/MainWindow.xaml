@@ -19,7 +19,7 @@
             </Grid.RowDefinitions>
             
             <Border Grid.Row="0" Background="{StaticResource SatinSheenGoldBrush}" Height="25"
-                    MouseLeftButtonDown="Dragbar_OnMouseLeftButtonDown">
+                    MouseLeftButtonDown="TopBar_OnMouseLeftButtonDown">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
@@ -50,9 +50,9 @@
             </Grid.ColumnDefinitions>
             
             <StackPanel Grid.Column="0" Grid.Row="0" Background="{StaticResource JetBrush}">
-                <TextBlock Foreground="{StaticResource PlatinumBrush}" Text="SideBar Element 1"/>
-                <TextBlock Foreground="{StaticResource PlatinumBrush}" Text="SideBar Element 2"/>
-                <TextBlock Foreground="{StaticResource PlatinumBrush}" Text="SideBar Element 3"/>
+                <Button x:Name="AddLauncher" Content="Add Launcher" FontSize="12" Style="{StaticResource HoverButtonStyle}"/>
+                <Button x:Name="EditLauncher" Content="Edit Launcher" FontSize="12" Style="{StaticResource HoverButtonStyle}"/>
+                <Button x:Name="DeleteLauncher" Content="Delete Launcher" FontSize="12" Style="{StaticResource HoverButtonStyle}"/>  
             </StackPanel>
             
             <Grid Grid.Row="0" Grid.Column="1" ShowGridLines="False">
@@ -62,12 +62,12 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
             
-                <TextBlock Grid.Row="0" Text="Main content placeholder"/>
+                <TextBlock Grid.Row="0" Text="Url of the Launcher"/>
             
             
-                <TextBlock Grid.Row="1" Text="Main content">
-                    
-                </TextBlock>
+                <Border Grid.Row="1" BorderBrush="{StaticResource JetBrush}" BorderThickness="0 1 0 0">
+                    <TextBlock Text="this is where the launcher come in"/>
+                </Border>
             </Grid>
         </Grid>
     </Grid>

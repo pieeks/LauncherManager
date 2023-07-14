@@ -13,7 +13,7 @@ namespace LauncherManager
             InitializeComponent();
         }
 
-        private void Dragbar_OnMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void TopBar_OnMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             this.DragMove();
             if (e.ClickCount == 2)

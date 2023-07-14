@@ -6,7 +6,7 @@ services:
       context: ./database
     environment:
       MYSQL_ROOT_PASSWORD: "example"
-      MYSQL_DATABASE: "motorshow"
+      MYSQL_DATABASE: "launcherApp"
       MYSQL_USER: "user"
       MYSQL_PASSWORD: "mypass"
     ports:
